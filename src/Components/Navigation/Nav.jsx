@@ -10,8 +10,7 @@ const Nav = ({ interChange }) => {
       <nav className={styles.components}>
         <div><b className={styles.logo}> News 24x7 </b></div>
         <ul>
-          <li className={styles.casualLists} onClick={() => interChange('0%')}
-          >
+          <li className={styles.casualLists} onClick={() => interChange('0%')}>
             Top Headlines</li>
 
           <li className={styles.casualLists}
@@ -31,9 +30,9 @@ const Nav = ({ interChange }) => {
       </nav>
       {menu && <div className={styles.NotCasual}>
         <IoMdClose className={styles.crossbtn} onClick={() => { setMenu(false) }} />
-        <li>Top Headlines</li>
-        <li>Tripura Headlines</li>
-        <li>Stocks </li>
+        <li onClick={() => { interChange('0%'), setMenu(false) }}>Top Headlines</li>
+        <li onClick={() => { interChange('-100%'), setMenu(false) }}>Tripura Headlines</li>
+        <li onClick={() => { interChange('-200%'), setMenu(false) }}>Stocks </li>
       </div>
       }
     </>

@@ -52,6 +52,8 @@
     height: 40px;
     border: none;
     background: none;
+    opacity: 0.67;
+    transition: 0.15s ease;
   }
 
   .menuIcon {
@@ -62,20 +64,23 @@
     height: 35px;
   }
 
+  .menu:hover {
+    opacity: 1;
+  }
+
   .NotCasual {
     display: block;
-    position: absolute;
-    right: 0.001%;
     margin-top: 1px;
-    width: 210px;
-    background: #000;
+    width: 100%;
+    background: #0000006e;
+    transition: 0.22s ease;
     height: calc(100vh - 70px);
   }
 
   .NotCasual li {
     text-align: center;
     padding: 8px 20px;
-    width: 200px;
+    width: 100%;
     transition: 0.12s ease-in;
   }
 
@@ -88,6 +93,10 @@
     height: 20px;
     width: 20px;
     cursor: pointer;
+  }
+
+  .crossbtn:hover {
+    transform: scale(1.5);
   }
 
   .logo {
