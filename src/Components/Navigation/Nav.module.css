@@ -1,0 +1,96 @@
+.components {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  height: 50px;
+  background-color: #000000;
+}
+
+.components ul {
+  display: flex;
+  gap: 40px;
+}
+
+.casualLists {
+  cursor: pointer;
+  transition: 0.15s ease-in;
+}
+
+.casualLists:hover {
+  color: rgb(233, 143, 111);
+
+}
+
+.logo {
+  font-size: 30px;
+  transition: 0.22s ease-in-out;
+  cursor: default;
+}
+
+.logo:hover {
+  color: orangered;
+}
+
+.menu {
+  display: none;
+}
+
+.NotCasual {
+  display: none;
+}
+
+@media (max-width:650px) {
+  .casualLists {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    display: flex;
+    width: 55px;
+    height: 40px;
+    border: none;
+    background: none;
+  }
+
+  .menuIcon {
+    filter: invert(100%);
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 35px;
+  }
+
+  .NotCasual {
+    display: block;
+    position: absolute;
+    right: 0.001%;
+    margin-top: 1px;
+    width: 210px;
+    background: #000;
+    height: calc(100vh - 70px);
+  }
+
+  .NotCasual li {
+    text-align: center;
+    padding: 8px 20px;
+    width: 200px;
+    transition: 0.12s ease-in;
+  }
+
+  .NotCasual li:hover {
+    background-color: #ffffff3d;
+    cursor: pointer;
+  }
+
+  .crossbtn {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}
