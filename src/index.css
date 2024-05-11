@@ -4,6 +4,14 @@ body {
   color: azure;
   background-color: black;
   overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#root {
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-y: hidden;
 }
 
 a {
