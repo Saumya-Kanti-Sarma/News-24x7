@@ -21,7 +21,7 @@ const Headlines = () => {
   return (
     <>
       <div className={styles.main}>
-        {article.length > 0 ? ( // Check if article is not null or undefined
+        {article && article.length > 0 ? ( // Check if article is not null or undefined
           article.map((contexts, index) => (
             <div className='individuals' key={index}>
               <img src={contexts.urlToImage || "def.jpg"} onError={(e) => { e.target.src = 'def.jpg' }} />
