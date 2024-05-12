@@ -89,3 +89,19 @@
     font-size: 18px;
   }
 }
+
+@media (max-width: 480px) {
+  .content-area p {
+    font-size: 10px;
+  }
+
+  .content-area b {
+    min-width: 50px;
+    font-size: 12px;
+  }
+
+  .individuals img {
+    max-width: calc(100% - 32px);
+    max-height: calc(100% - 32px);
+  }
+}
