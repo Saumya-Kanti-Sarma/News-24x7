@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from "./Headlines.module.css";
 
 const Headlines = () => {
-  const [article, setArticle] = useState(['']); // Initialize as null
+  const [article, setArticle] = useState([]); // Initialize as null
 
   useEffect(() => {
     const apiKey = '9182c935c52e41e6be544709356d5da2';
