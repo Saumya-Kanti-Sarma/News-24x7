@@ -28,7 +28,7 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
-  height: 16vh;
+  height: 16%;
   padding: 5px 8px;
   transition: 0.08s ease-in-out;
 
@@ -85,8 +85,15 @@
     font-size: 13px;
   }
 
+  .individuals img {
+    max-width: calc(100% - 18px);
+    max-height: calc(100% - 18px);
+  }
+
+
   .content-area b {
     font-size: 18px;
+    min-width: 75px;
   }
 }
 

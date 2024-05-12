@@ -1,28 +1,42 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./Headlines.module.css"
-import { IoMdClose } from "react-icons/io";
-
 
 const Headlines = () => {
+  const [article, setArticle] = useState([]);
+  useEffect(() => {
+    const apiKey = '9182c935c52e41e6be544709356d5da2';
+    const URL = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
+
+    fetch(URL)
+      .then(response => response.json())
+      .then(data => {
+        setArticle(data.articles);
+
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
   return (
     <>
       <div className={styles.main}>
 
-        <div className='individuals'>
-          <img src="" onError={(e) => { e.target.src = 'def.jpg' }} />
-          <div className='content-area'>
-            <div className='content-heading '>
-              <b>Heading:{ }</b>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliqLorem ipsum dolor sit amet consectetur adipisici. Molestiae aliq
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aliq
-              </p>
-            </div>
-            <div className='content-heading '>
-              <b>Author: </b><p> Unknown</p>
+        {article.map((contexts, index) => (
+          <div className='individuals' key={index}>
+            <img src={contexts.urlToImage || "def.jpg"} onError={(e) => { e.target.src = 'def.jpg' }} />
+            <div className='content-area'>
+              <div className='content-heading '>
+                <b>Heading:{ }</b>
+                <p>{contexts.title || "Undefined Title"}
+                  { }
+                </p>
+              </div>
+              <div className='content-heading '>
+                <b>Author: </b><p> {contexts.author || 'Unknown'}</p>
+              </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
 
     </>
