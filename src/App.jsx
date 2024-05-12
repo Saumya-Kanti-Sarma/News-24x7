@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Nav from './Components/Navigation/Nav'
 import './App.css'
+import Headlines from './Components/Top_Headlines/Headlines';
 
 function App() {
   const [translate, setTreanslate] = useState('0%');
@@ -15,6 +16,7 @@ function App() {
           <div className='heading'>
             <h1>Top Headlines</h1>
           </div>
+          <Headlines />
         </div>
         <div className="page">
           <div className='heading'>
