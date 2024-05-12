@@ -36,13 +36,13 @@
 
 .individuals:hover {
   background-color: #1d1b1b42;
-  transform: scale(1.01);
 }
 
 .individuals img {
   max-width: calc(100% - 10px);
   max-height: calc(100% - 10px);
-  object-fit: cover;
+  object-fit: fill;
+  object-position: center;
   border-radius: 8px;
 }
 

@@ -20,27 +20,28 @@ const Headlines = () => {
   return (
     <>
       <div className={styles.main}>
+        {article.length > 0 ? (
+          article.map((contexts, index) => (
+            <div className='individuals' key={index}>
+              <img src={contexts.urlToImage || "def.jpg"} onError={(e) => { e.target.src = 'def.jpg' }} />
 
-        {article.map((contexts, index) => (
-          <div className='individuals' key={index}>
-            <img src={contexts.urlToImage || "def.jpg"} onError={(e) => { e.target.src = 'def.jpg' }} />
-            <div className='content-area'>
-              <div className='content-heading '>
-                <b>Heading:{ }</b>
-                <p>{contexts.title || "Undefined Title"}
-                  { }
-                </p>
-              </div>
-              <div className='content-heading '>
-                <b>Author: </b><p> {contexts.author || 'Unknown'}</p>
+              <div className='content-area'>
+                <div className='content-heading '>
+                  <b>Heading:</b>
+                  <p>{contexts.title}</p>
+                </div>
+                <div className='content-heading '>
+                  <b>Author: </b><p>{contexts.author || 'Unknown'}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
-
     </>
-  )
-}
+  );
+};
 
-export default Headlines
+export default Headlines;
