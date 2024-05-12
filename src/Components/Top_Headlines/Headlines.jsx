@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from "./Headlines.module.css";
 
 const Headlines = () => {
-  const [article, setArticle] = useState(null); // Initialize as null
+  const [article, setArticle] = useState(['']); // Initialize as null
 
   useEffect(() => {
     const apiKey = '9182c935c52e41e6be544709356d5da2';
@@ -21,7 +21,7 @@ const Headlines = () => {
   return (
     <>
       <div className={styles.main}>
-        {article && article.length > 0 ? ( // Check if article is not null or undefined
+        {article.length > 0 ? ( // Check if article is not null or undefined
           article.map((contexts, index) => (
             <div className='individuals' key={index}>
               <img src={contexts.urlToImage || "def.jpg"} onError={(e) => { e.target.src = 'def.jpg' }} />
