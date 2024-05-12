@@ -28,7 +28,7 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
-  height: 130px;
+  height: 16vh;
   padding: 5px 8px;
   transition: 0.08s ease-in-out;
 
@@ -40,8 +40,8 @@
 }
 
 .individuals img {
-  max-width: 128px;
-  max-height: 138px;
+  max-width: calc(100% - 10px);
+  max-height: calc(100% - 10px);
   object-fit: cover;
   border-radius: 8px;
 }
@@ -71,4 +71,21 @@
   min-width: 30px;
   min-height: 30px;
   cursor: pointer;
+}
+
+
+@media (max-width: 720px) {
+  .content-area p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 688px) {
+  .content-area p {
+    font-size: 13px;
+  }
+
+  .content-area b {
+    font-size: 18px;
+  }
 }
