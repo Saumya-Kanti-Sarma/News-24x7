@@ -3,7 +3,6 @@ import styles from "./Headlines.module.css";
 
 const Headlines = () => {
   const [article, setArticle] = useState(null); // Initialize as null
-  const [politics, setPolitics] = useState(null); // Initialize as null
 
   useEffect(() => {
 
