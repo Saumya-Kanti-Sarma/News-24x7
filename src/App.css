@@ -106,12 +106,19 @@
   }
 
   .content-area b {
-    min-width: 50px;
-    font-size: 12px;
+    min-width: 40px;
+    font-size: 10px;
+  }
+
+  .individuals {
+    min-height: 90px;
+    margin: 0;
+    gap: 3px;
+    overflow: hidden;
   }
 
   .individuals img {
-    max-width: calc(100% - 32px);
-    max-height: calc(100% - 32px);
+    width: 100px;
+    height: 100px;
   }
 }
