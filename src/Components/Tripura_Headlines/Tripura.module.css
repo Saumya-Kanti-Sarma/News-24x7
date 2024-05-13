@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: #ffffffea;
+  margin: 0 8px;
+  height: calc(100vh - 129px);
+  border-radius: 4px;
+  color: black;
+  overflow: auto;
+  overflow-x: hidden;
+  position: relative;
+}

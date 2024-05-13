@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Nav from './Components/Navigation/Nav'
 import './App.css'
 import Headlines from './Components/Top_Headlines/Headlines';
+import Tripura from './Components/Tripura_Headlines/Tripura';
+import Stocks from './Components/Stocks/Stocks';
 
 function App() {
   const [translate, setTreanslate] = useState('0%');
@@ -22,11 +24,13 @@ function App() {
           <div className='heading'>
             <h1>Tripura Headlines</h1>
           </div>
+          <Tripura />
         </div>
         <div className="page">
           <div className='heading'>
             <h1>Stocks</h1>
           </div>
+          <Stocks />
         </div>
       </div>
     </>

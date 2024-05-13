@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import styles from "./Tripura.module.css";
+import styles from "./Stocks.module.css";
 
-const Tripura = () => {
+const Stocks = () => {
   const [article, setArticle] = useState(null); // Initialize as null
 
   useEffect(() => {
 
-    const url = 'https://newsdata.io/api/1/news?apikey=pub_440474795d31aa774416df4707500b3b1633f&country=in&q=north-east';
+    const url = 'https://newsdata.io/api/1/news?apikey=pub_440474795d31aa774416df4707500b3b1633f&country=in&q=share-market';
     fetch(url)
       .then(fetchData => fetchData.json())
       .then(data => {
@@ -41,4 +41,4 @@ const Tripura = () => {
   );
 };
 
-export default Tripura;
+export default Stocks;
